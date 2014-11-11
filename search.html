@@ -1,0 +1,28 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+
+<div id="results">
+	
+</div>
+
+<script>
+	var JEKYLL_POSTS = [];
+	{% for post in site.posts %}
+	JEKYLL_POSTS.push({
+		title: "{{ post.title }}",
+		link: "{{ post.url | prepend: site.baseurl }}",
+		content: "{{ post.content | strip_newlines | strip_html }}"
+	}); 
+    {% endfor %}
+</script>
+<script src="/js/search.js"></script>
+<script>
+	new jekyllSearch({
+		selector: "#results",
+		properties: ["title", "content"]
+	});
+</script>

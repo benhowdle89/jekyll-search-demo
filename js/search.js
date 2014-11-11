@@ -17,7 +17,7 @@
 		if (!params.hasOwnProperty("query")) {
 			return null;
 		}
-		
+
 		return decodeURIComponent(params.query);
 
 	};
@@ -50,7 +50,7 @@
 		results.forEach(function(result) {
 
 			var div = document.createElement("div");
-			div.class = "search-result";
+			div.className = "search-result";
 
 			var title = document.createElement("h2");
 			var link = document.createElement("a");

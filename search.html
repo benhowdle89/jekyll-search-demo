@@ -19,7 +19,7 @@ permalink: /search/
 	}); 
     {% endfor %}
 </script>
-<script src="/js/search.js"></script>
+<script src="{{ "/js/search.js" | prepend: site.baseurl }}"></script>
 <script>
 	new jekyllSearch({
 		selector: "#results",
